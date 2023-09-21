@@ -67,20 +67,28 @@ public class Main {
 
         //--------------- Exercício 6 ---------------//
 
-        System.out.println("Escreva uma frase e colocaremos ao contrário");
-        String frase = scanner.nextLine();
-
-        String resultado = reverter(frase);
-        System.out.println("O contrário é: " + resultado);
-
-        scanner.close();
-
-        //se pa q eu vou ter q separar esse exercicio, ve legal
+        //Exercicio separado na pasta a2e6
 
         //--------------- Exercício 7 ---------------//
 
-        //System.out.println("Os espartanos estão indo para a guerra em menor número, tente adivinhar quantos soldados eles vão enfrentar:");
-        //int soldados = scanner.nextInt();
+
+        int i = 0;
+        while(i <= 5) {
+            System.out.println("Os espartanos estão indo para a guerra em menor número, tente adivinhar quantos soldados eles vão enfrentar:");
+            int chute = scanner.nextInt();
+
+            if (chute < 300000) {
+                System.out.println("Um pouco mais!");
+                i++;
+            } else if(chute > 300000) {
+                System.out.println("Um pouco menos!");
+                i++;
+            }
+            if(chute == 300000) {
+                System.out.println("VOCÊ ACERTOU");
+                break;
+            }
+        }
 
     }
 }
